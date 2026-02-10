@@ -5,11 +5,10 @@ namespace EFCoreDemo.Data;
 
 public class AppDbContext : DbContext
 {
-    public DbSet<Product> Products => Set<Product>();
-    public DbSet<Employee> Employees => Set<Employee>();
+    public DbSet<InventoryItem> InventoryItems => Set<InventoryItem>();
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFCoreDemo3;Trusted_Connection=True;TrustServerCertificate=True;");
+        optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFCoreInventoryDemo;Trusted_Connection=True;TrustServerCertificate=True;");
     }
 }
